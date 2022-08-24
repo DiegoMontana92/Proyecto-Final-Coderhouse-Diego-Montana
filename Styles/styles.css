@@ -9,7 +9,7 @@
                          'Menu Menu'
                          'Contenido Contenido'
                          'Footer Footer';
-    grid-template-rows: 10% 15% auto 45% ;
+    grid-template-rows: 5% 10% 5% 1 ;
     background-color: #000000;
     
 }
@@ -78,14 +78,6 @@ h1{
     text-decoration:none;
     letter-spacing:2px;
     text-transform:uppercase;
-}
-
-.btn:hover{
-    border:none;
-    background:rgba(0, 0, 0, 0.4);
-    background:#fff;
-    padding:20px 20px; #000;
-    color:#1b1b1b;
 }
 
 .footer{
@@ -228,5 +220,100 @@ h1{
 }
 
 
+/* Start: Menu Responsive */
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Open Sans", Sans-serif;
+}
+
+header{
+    height: 90px;
+    background-color: #000000;
+}
+
+.inner-width{
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.navigation-menu{
+    float:center;
+    display: flex;
+    min-height: 90px;
+}
+
+.navigation-menu a{
+    margin-left: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: .3s linear;
+
+}
+
+.navigation-menu a:hover{
+    background:#faf9f9;
+    color: #4e4e4e;
+    transform: scale(1.1);
+}
+.navigation-menu i{
+    margin-right: 8px;
+    font-size: 16px;
+}
 
 
+
+.menu-toggle-btn{
+    float: right;
+    height: 90px;
+    line-height: 90px !important;
+    color: antiquewhite;
+    font-size: 26px;
+    display: none !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px){
+    .menu-toggle-btn{
+        display: block !important;
+    }
+}
+
+.navigation-menu{
+    position:fixed;
+    width: 100%;
+    max-width: 250px;
+    background: #000000;
+    top: 80px;
+    right: 0;
+    display:contents;
+    padding: 20px 40px;
+}
+
+.navigation-menu: ::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fefefe;
+    position: absolute;
+    top: -10px;
+    right: 10px;
+
+
+}
+
+
+.navigation-menu a{
+    display: block;
+    margin: 10px 0;
+}
+
+.navigation-menu.active{
+    display: block;
+}
